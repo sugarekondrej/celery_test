@@ -4,7 +4,7 @@ from django.contrib import admin
 from .models import BillingItem
 
 class BillingItem_Admin(admin.ModelAdmin):
-    list_display=('item_name','number_1','number_2','total')
+    list_display=('item_name','number_1','number_2','total','timestamp')
     list_display_links=('item_name','number_1','number_2','total')
 
 

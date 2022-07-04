@@ -1,4 +1,5 @@
 from __future__ import absolute_import, unicode_literals
+from ast import arg
 import random
 from celery import task
 from .models import BillingItem
@@ -18,5 +19,6 @@ def mul(item_name,x, y):
 
 
 @task(name="sum_list_numbers")
-def xsum(numbers):
-    return sum(numbers)
+def xsum(*args):
+    total = sum((args))
+    return total
